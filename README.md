@@ -74,16 +74,25 @@ nexora-saas-landing-page/
 │
 ├── index.html
 ├── README.md
+├── package.json
+├── package-lock.json
+├── .gitignore
 │
 ├── assets/
 │   ├── images/
-│   ├── icons/
 │   
+├── css/
+│   ├── input.css
+│   └── output.css
 │
 ├── js/
 │   └── script.js
 │
+├── figma/
+│ │   └── final-ui-preview.png
+│
 └── screenshots/
     ├── desktop-preview.png
     ├── mobile-preview.png
+    
    
