@@ -329,7 +329,7 @@ h1, h2, h3, h4 {
 /* ═══════════════════════════════════════════════════════════
    TRUSTED
    ═══════════════════════════════════════════════════════════ */
-  .trusted {
+.trusted {
   @apply py-16 border-t border-b;
   border-color: var(--border);
   background: var(--bg-1);
@@ -340,19 +340,67 @@ h1, h2, h3, h4 {
   color: var(--text-3);
 }
 
-.logo-strip {
-  @apply flex justify-center items-center gap-12 flex-wrap;
+.marquee-track {
+  @apply flex w-max animate-[marquee_28s_linear_infinite];
 }
 
-.logo-item {
-  @apply font-bold text-base tracking-[-0.02em] transition-colors duration-300;
-  font-family: 'Syne', sans-serif;
-  color: var(--text-3);
+.marquee-track:hover {
+  animation-play-state: paused;
 }
 
-.logo-item:hover {
-  color: var(--text-2);
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
+
+/* Fade edges */
+.marquee-wrap {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+  .logo-pill {
+    @apply inline-flex items-center gap-[10px]
+          px-7 py-[10px] mx-2 rounded-full
+          whitespace-nowrap transition-all duration-300;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.02);
+    cursor: default;
+  }
+
+  .logo-pill:hover {
+    border-color: rgba(99,102,241,0.35);
+    background: rgba(99,102,241,0.06);
+  }
+
+  .logo-pill svg {
+    @apply shrink-0 opacity-50;
+  }
+
+  .logo-pill span {
+    @apply text-[0.9rem] font-bold tracking-[-0.01em]
+          transition-colors duration-300;
+    font-family: 'Syne', sans-serif;
+    color: #64748b;
+  }
 
 /* ═══════════════════════════════════════════════════════════
    SECTION HEADER
@@ -454,6 +502,67 @@ h1, h2, h3, h4 {
   border-color: var(--border);
   color: var(--text-3);
 }
+
+/* ═══════════════════════════════════════════════════════════
+   TESTIMONIALS
+   ═══════════════════════════════════════════════════════════ */
+
+  .testimonials {
+    @apply py-[120px];
+    background: var(--bg-1);
+  }
+
+  .testimonials-grid {
+    @apply grid gap-4;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testi-card {
+    @apply flex flex-col gap-4 p-8 border transition-all duration-300;
+    background: var(--bg-card);
+    border-color: var(--border);
+    border-radius: var(--radius-lg);
+  }
+
+  .testi-card:hover {
+    border-color: var(--border-h);
+    transform: translateY(-2px);
+  }
+
+  .testi-featured {
+    border-color: rgba(99,102,241,0.3);
+    background: rgba(99,102,241,0.04);
+  }
+
+  .testi-stars {
+    @apply text-[0.9rem] tracking-[2px];
+    color: #f59e0b;
+  }
+
+  .testi-card p {
+    @apply text-[0.92rem] leading-[1.7] flex-1;
+    color: var(--text-2);
+  }
+
+  .testi-author {
+    @apply flex items-center gap-3;
+  }
+
+  .testi-avatar {
+    @apply w-10 h-10 rounded-full flex items-center justify-center
+          text-[0.75rem] font-bold shrink-0;
+    color: white;
+  }
+
+  .testi-name {
+    @apply text-[0.88rem] font-semibold;
+    color: var(--text-1);
+  }
+
+  .testi-role {
+    @apply text-[0.78rem];
+    color: var(--text-3);
+  }
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -560,7 +669,7 @@ h1, h2, h3, h4 {
     @apply flex justify-center gap-[14px] flex-wrap;
   }
 
-  
+
 /* ═══════════════════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════════════════ */

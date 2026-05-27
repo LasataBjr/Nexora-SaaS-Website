@@ -578,30 +578,65 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   color: var(--text-3);
 }
-.logo-strip {
+.marquee-track {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: calc(var(--spacing) * 12);
+  width: max-content;
+  animation: marquee 28s linear infinite;
 }
-.logo-item {
-  font-size: var(--text-base);
-  line-height: var(--tw-leading, var(--text-base--line-height));
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-wrap {
+  -webkit-mask-image: linear-gradient( to right, transparent 0%, black 12%, black 88%, transparent 100% );
+  mask-image: linear-gradient( to right, transparent 0%, black 12%, black 88%, transparent 100% );
+}
+.logo-pill {
+  margin-inline: calc(var(--spacing) * 2);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: calc(infinity * 1px);
+  padding-inline: calc(var(--spacing) * 7);
+  padding-block: 10px;
+  white-space: nowrap;
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.02);
+  cursor: default;
+}
+.logo-pill:hover {
+  border-color: rgba(99,102,241,0.35);
+  background: rgba(99,102,241,0.06);
+}
+.logo-pill svg {
+  flex-shrink: 0;
+  opacity: 50%;
+}
+.logo-pill span {
+  font-size: 0.9rem;
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
-  --tw-tracking: -0.02em;
-  letter-spacing: -0.02em;
+  --tw-tracking: -0.01em;
+  letter-spacing: -0.01em;
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
   --tw-duration: 300ms;
   transition-duration: 300ms;
   font-family: 'Syne', sans-serif;
-  color: var(--text-3);
-}
-.logo-item:hover {
-  color: var(--text-2);
+  color: #64748b;
 }
 .section-header {
   margin-bottom: calc(var(--spacing) * 16);
@@ -728,6 +763,80 @@ h1, h2, h3, h4 {
   font-size: 0.72rem;
   background: rgba(255,255,255,0.05);
   border-color: var(--border);
+  color: var(--text-3);
+}
+.testimonials {
+  padding-block: 120px;
+  background: var(--bg-1);
+}
+.testimonials-grid {
+  display: grid;
+  gap: calc(var(--spacing) * 4);
+  grid-template-columns: repeat(3, 1fr);
+}
+.testi-card {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  padding: calc(var(--spacing) * 8);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  background: var(--bg-card);
+  border-color: var(--border);
+  border-radius: var(--radius-lg);
+}
+.testi-card:hover {
+  border-color: var(--border-h);
+  transform: translateY(-2px);
+}
+.testi-featured {
+  border-color: rgba(99,102,241,0.3);
+  background: rgba(99,102,241,0.04);
+}
+.testi-stars {
+  font-size: 0.9rem;
+  --tw-tracking: 2px;
+  letter-spacing: 2px;
+  color: #f59e0b;
+}
+.testi-card p {
+  flex: 1;
+  font-size: 0.92rem;
+  --tw-leading: 1.7;
+  line-height: 1.7;
+  color: var(--text-2);
+}
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 3);
+}
+.testi-avatar {
+  display: flex;
+  height: calc(var(--spacing) * 10);
+  width: calc(var(--spacing) * 10);
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(infinity * 1px);
+  font-size: 0.75rem;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: white;
+}
+.testi-name {
+  font-size: 0.88rem;
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-1);
+}
+.testi-role {
+  font-size: 0.78rem;
   color: var(--text-3);
 }
 .faq {
