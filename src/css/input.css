@@ -106,11 +106,12 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary {
-  @apply px-6 py-3 rounded-md text-white text-sm whitespace-nowrap;
+  @apply px-6 py-3 rounded-md text-white text-sm whitespace-nowrap  
+         transition-all duration-200 ease-in-out;
   background: linear-gradient(135deg, var(--indigo), var(--violet));
   font-family: 'DM Sans', sans-serif;
   border: none;
-  transition: all 0.2s ease;
+  
 }
 
 .btn-primary:hover {
@@ -119,12 +120,12 @@ h1, h2, h3, h4 {
 }
  
 .btn-outline {
-  @apply px-6 py-3 rounded-md text-sm whitespace-nowrap;
+  @apply px-6 py-3 rounded-md text-sm whitespace-nowrap
+         transition-all duration-200 ease-in-out;
   background: transparent;
   color: var(--text-1);
   border: 1px solid var(--border-h);
   font-family: 'DM Sans', sans-serif;
-  transition: all 0.2s ease;
 }
 
 .btn-outline:hover {
@@ -165,7 +166,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-inner{
-    @apply flex items-center justify-between h-[72px];
+    @apply flex items-center justify-between h-[68px];
     gap: 40px;
 }
 
@@ -178,7 +179,7 @@ h1, h2, h3, h4 {
 }
 
 .logo-icon {
-  @apply text-2xl;
+  @apply text-[1.4rem];
   background: linear-gradient(135deg, var(--indigo), var(--violet));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -191,7 +192,7 @@ h1, h2, h3, h4 {
 
 .nav-links a {
   color: var(--text-2);
-  @apply text-sm transition-colors duration-200;
+  @apply text-sm font-medium transition-colors duration-200;
 }
 
 .nav-links a:hover { 
@@ -203,18 +204,15 @@ h1, h2, h3, h4 {
 }
 
 .hamburger {
-  display: none;
-  flex-direction: column;
+  @apply hidden flex-col ml-auto cursor-pointer;
   gap: 5px;
   background: none;
   border: none;
-  cursor: pointer;
-  margin-left: auto;
-  padding: 4px;
+  padding: 4px; 
 }
 
 .hamburger span {
-  display: block;
+  @apply block;
   width: 22px;
   height: 2px;
   background: var(--text-2);
@@ -223,9 +221,7 @@ h1, h2, h3, h4 {
 }
 
 .mobile-menu {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
+  @apply hidden flex-col gap-1;
   padding: 16px 24px 20px;
   border-top: 1px solid var(--border);
 }
@@ -244,5 +240,113 @@ h1, h2, h3, h4 {
 }
 
 .mobile-menu.open { 
+    @apply flex;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════════════════ */
+.hero {
+  @apply relative overflow-hidden pt-[160px] pb-[100px] bg-[var(--bg-0)];
+}
+
+.hero-glow {
+  @apply absolute rounded-full blur-[100px] pointer-events-none;
+}
+
+.glow-1 {
+  @apply w-[700px] h-[700px] top-[-200px] left-1/2 -translate-x-1/2;
+  background: rgba(99,102,241,0.12);
+}
+
+.glow-2 {
+  @apply w-[400px] h-[400px] top-[100px] right-[-100px];
+  background: rgba(139,92,246,0.1);
+}
+
+.glow-3 {
+  @apply w-[300px] h-[300px] bottom-0 left-[-50px];
+  background: rgba(14,165,233,0.08);
+}
+
+.hero-inner {
+  @apply relative text-center flex flex-col items-center;
+}
+
+.hero-badge {
+  @apply inline-flex items-center gap-2 px-[14px] py-[6px]
+         text-[0.8rem] font-medium mb-8 rounded-full;
+  
+  background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.25);
+  color: var(--indigo);
+  animation: fadeInDown 0.6s ease both;
+}
+
+.badge-dot {
+  @apply w-[6px] h-[6px] rounded-full;
+  background: var(--indigo);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1); 
+  }
+
+  50% { 
+    opacity: 0.5;
+    transform: scale(1.3); 
+  }
+}
+
+.hero-title {
+  @apply font-extrabold tracking-[-0.03em]
+         mb-6 ;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  animation: fadeInDown 0.6s 0.1s ease both;
+}
+
+.hero-sub {
+  @apply max-w-[580px] text-[1.1rem]
+         mb-10 animate-[fadeInDown_0.6s_0.2s_ease_both];
+  color: var(--text-2);
+}
+
+/* .hero-actions {
+  @apply flex gap-[14px] flex-wrap justify-center
+         mb-4 ;
+  animation: fadeInDown 0.6s 0.3s ease both;
+} */
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 16px;
+  animation: fadeInDown 0.6s 0.3s ease both;
+}
+
+.hero-note {
+  @apply text-[0.8rem]
+         mb-20 animate-[fadeInDown_0.6s_0.4s_ease_both];
+  color: var(--text-3);
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { 
+    display: none;
+  }
+
+  .hamburger {
     display: flex;
+  }
 }
