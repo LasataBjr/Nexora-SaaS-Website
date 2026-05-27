@@ -314,17 +314,9 @@ h1, h2, h3, h4 {
   color: var(--text-2);
 }
 
-/* .hero-actions {
+.hero-actions {
   @apply flex gap-[14px] flex-wrap justify-center
          mb-4 ;
-  animation: fadeInDown 0.6s 0.3s ease both;
-} */
-.hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 16px;
   animation: fadeInDown 0.6s 0.3s ease both;
 }
 
@@ -332,6 +324,34 @@ h1, h2, h3, h4 {
   @apply text-[0.8rem]
          mb-20 animate-[fadeInDown_0.6s_0.4s_ease_both];
   color: var(--text-3);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TRUSTED
+   ═══════════════════════════════════════════════════════════ */
+  .trusted {
+  @apply py-16 border-t border-b;
+  border-color: var(--border);
+  background: var(--bg-1);
+}
+
+.trusted-label {
+  @apply text-center text-[0.8rem] uppercase tracking-[0.1em] mb-8;
+  color: var(--text-3);
+}
+
+.logo-strip {
+  @apply flex justify-center items-center gap-12 flex-wrap;
+}
+
+.logo-item {
+  @apply font-bold text-base tracking-[-0.02em] transition-colors duration-300;
+  font-family: 'Syne', sans-serif;
+  color: var(--text-3);
+}
+
+.logo-item:hover {
+  color: var(--text-2);
 }
 
 
