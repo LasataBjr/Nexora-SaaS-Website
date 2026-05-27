@@ -1,4 +1,4 @@
-// ─── FAQ Accordion ──────────────────────────────────────────
+//  ────────────── FAQ Accordion ──────────────
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
   const isOpen = item.classList.contains('open');

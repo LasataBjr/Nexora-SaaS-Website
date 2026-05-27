@@ -519,7 +519,48 @@ h1, h2, h3, h4 {
   padding: 0 20px 18px;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   CTA
+   ═══════════════════════════════════════════════════════════ */
 
+  .cta-section {
+    @apply relative overflow-hidden text-center py-[120px];
+    background: var(--bg-1);
+  }
+
+  .cta-glow {
+    @apply absolute pointer-events-none;
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+      ellipse,
+      rgba(99,102,241,0.15),
+      transparent 70%
+    );
+  }
+
+  .cta-inner {
+    @apply relative;
+  }
+
+  .cta-title {
+    @apply text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold
+          tracking-[-0.03em] mb-5;
+  }
+
+  .cta-sub {
+    @apply text-[1.05rem] mb-10;
+    color: var(--text-2);
+  }
+
+  .cta-actions {
+    @apply flex justify-center gap-[14px] flex-wrap;
+  }
+
+  
 /* ═══════════════════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════════════════ */

@@ -815,6 +815,45 @@ h1, h2, h3, h4 {
   max-height: 200px;
   padding: 0 20px 18px;
 }
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  padding-block: 120px;
+  text-align: center;
+  background: var(--bg-1);
+}
+.cta-glow {
+  pointer-events: none;
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient( ellipse, rgba(99,102,241,0.15), transparent 70% );
+}
+.cta-inner {
+  position: relative;
+}
+.cta-title {
+  margin-bottom: calc(var(--spacing) * 5);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+  --tw-tracking: -0.03em;
+  letter-spacing: -0.03em;
+}
+.cta-sub {
+  margin-bottom: calc(var(--spacing) * 10);
+  font-size: 1.05rem;
+  color: var(--text-2);
+}
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
 .footer {
   border-top-style: var(--tw-border-style);
   border-top-width: 1px;
