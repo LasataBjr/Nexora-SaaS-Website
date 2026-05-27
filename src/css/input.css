@@ -457,6 +457,70 @@ h1, h2, h3, h4 {
 
 
 /* ═══════════════════════════════════════════════════════════
+   FAQ
+   ═══════════════════════════════════════════════════════════ */
+
+.faq {
+  @apply py-[120px];
+  background: var(--bg-0);
+}
+
+.faq-inner {
+  @apply grid gap-20 items-start;
+  grid-template-columns: 1fr 1fr;
+}
+
+.faq-list {
+  @apply flex flex-col gap-1;
+}
+
+.faq-item {
+  @apply overflow-hidden border transition-colors duration-200;
+  border-color: var(--border);
+  border-radius: var(--radius-md);
+}
+
+.faq-item.open {
+  border-color: var(--border-h);
+}
+
+.faq-q {
+  @apply w-full flex justify-between items-center gap-3
+         px-5 py-[18px] text-left cursor-pointer
+         transition-colors duration-200 border-none;
+  background: transparent;
+  color: var(--text-1);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.faq-q:hover {
+  background: var(--bg-card);
+}
+
+.faq-chevron {
+  @apply shrink-0 transition-transform duration-300;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-a {
+  @apply overflow-hidden px-5 text-[0.88rem]
+         leading-[1.7] transition-all duration-300;
+  max-height: 0;
+  color: var(--text-2);
+}
+
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding: 0 20px 18px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════════════════ */
   
