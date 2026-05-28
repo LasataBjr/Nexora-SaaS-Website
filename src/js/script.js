@@ -1,3 +1,34 @@
+// ─── Navbar scroll effect ───────────────────────────────────
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+// ─── Chart Tab Toggle ───────────────────────────────────────
+  document.querySelectorAll('.ct').forEach(tab => {
+    tab.addEventListener('click', function () {
+      this.closest('.chart-tabs').querySelectorAll('.ct') // Find all tabs in the same chart-tabs container
+      .forEach(t => t.classList.remove('active')); // Remove active from all tabs
+
+      this.classList.add('active');
+
+      // Animate bars with random variation for demo
+      animateBars();
+    });
+  });
+
+  function animateBars() {
+    document.querySelectorAll('.bar:not(.bar-active)').forEach(bar => { // Only animate bars that are not active (for demo purposes)
+      const h = Math.random() * 60 + 30; // Random height between 30% and 90% for demo
+      bar.style.height = h + '%'; // Animate height change with a slight delay for staggered effect
+    });
+  }
+
+
 //  ────────────── Billing Toggle  ──────────────
 
   const billingToggle = document.getElementById('billingToggle');
