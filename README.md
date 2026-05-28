@@ -77,6 +77,8 @@ nexora-saas-landing-page/
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
+├── signin.html
+├── signup.html
 │
 ├── assets/
 │   ├── images/
