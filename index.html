@@ -45,34 +45,103 @@
             </div>
         </nav>
 
-        <!-- ══════════════════ HERO ══════════════════ -->
-        <section id="hero" class="hero">
+        <!-- ═══════════════════════════════════════════ HERO ═══ -->
+        <section class="hero" id="hero">
             <div class="hero-glow glow-1"></div>
             <div class="hero-glow glow-2"></div>
             <div class="hero-glow glow-3"></div>
-
             <div class="container hero-inner">
                 <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Now with GPT-5 integration
+                <span class="badge-dot"></span>
+                Now with GPT-5 integration
                 </div>
-                <h1 class="hero-title">Analytics that<br/>
-                    <span class="gradient-text">think ahead</span>
+                <h1 class="hero-title">
+                Analytics that<br />
+                <span class="gradient-text">think ahead</span>
                 </h1>
                 <p class="hero-sub">
-                        Nexora turns raw data into strategic clarity. AI-powered dashboards, predictive insights, and real-time alerts — built for teams that move fast.
+                Nexora turns raw data into strategic clarity. AI-powered dashboards, predictive insights, and real-time alerts — built for teams that move fast.
                 </p>
                 <div class="hero-actions">
-                    <a href="#" class="btn btn-primary btn-lg">
-                        Get started free
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
-                    <a href="#dashboard" class="btn btn-outline btn-lg">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 5.5l4 2.5-4 2.5V5.5z" fill="currentColor"/></svg>
-                        Watch demo
-                    </a>
+                <a href="#" class="btn btn-primary btn-lg">
+                    Get started free
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#dashboard" class="btn btn-outline btn-lg">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 5.5l4 2.5-4 2.5V5.5z" fill="currentColor"/></svg>
+                    Watch demo
+                </a>
                 </div>
                 <p class="hero-note">No credit card required · Free 14-day trial · Cancel anytime</p>
+
+                <!-- HERO VISUAL -->
+                <div class="hero-visual">
+                    <div class="dashboard-preview-hero">
+                        <div class="dp-topbar">
+                        <div class="dp-dots"><span></span><span></span><span></span></div>
+                        <div class="dp-tab active">Overview</div>
+                        <div class="dp-tab">Revenue</div>
+                        <div class="dp-tab">Users</div>
+                        </div>
+                        <div class="dp-body">
+                        <div class="dp-stats-row">
+                            <div class="dp-stat-card">
+                            <div class="dp-stat-label">Total Revenue</div>
+                            <div class="dp-stat-value">$284,921</div>
+                            <div class="dp-stat-change up">↑ 18.4%</div>
+                            </div>
+                            <div class="dp-stat-card">
+                            <div class="dp-stat-label">Active Users</div>
+                            <div class="dp-stat-value">48,301</div>
+                            <div class="dp-stat-change up">↑ 9.2%</div>
+                            </div>
+                            <div class="dp-stat-card">
+                            <div class="dp-stat-label">Churn Rate</div>
+                            <div class="dp-stat-value">2.4%</div>
+                            <div class="dp-stat-change down">↓ 0.6%</div>
+                            </div>
+                            <div class="dp-stat-card">
+                            <div class="dp-stat-label">AI Score</div>
+                            <div class="dp-stat-value">94.8</div>
+                            <div class="dp-stat-change up">↑ 3.1%</div>
+                            </div>
+                        </div>
+                        <div class="dp-chart-area">
+                            <div class="dp-chart-label">Revenue Trend — Last 30 days</div>
+                            <div class="dp-chart">
+                            <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" class="chart-svg">
+                                <defs>
+                                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
+                                    <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                <path d="M0,90 C30,85 50,70 80,65 C110,60 130,72 160,55 C190,38 210,42 240,30 C270,18 290,35 320,28 C350,21 370,10 400,15 C430,20 460,8 500,5 L500,120 L0,120Z" fill="url(#chartGrad)"/>
+                                <path d="M0,90 C30,85 50,70 80,65 C110,60 130,72 160,55 C190,38 210,42 240,30 C270,18 290,35 320,28 C350,21 370,10 400,15 C430,20 460,8 500,5" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+                                <circle cx="240" cy="30" r="4" fill="#6366f1"/>
+                                <circle cx="400" cy="15" r="4" fill="#a78bfa"/>
+                            </svg>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- floating cards -->
+                    <div class="float-card float-card-1">
+                        <div class="fc-icon">🤖</div>
+                        <div>
+                        <div class="fc-title">AI Insight</div>
+                        <div class="fc-text">Revenue up 18% — Q3 on track</div>
+                        </div>
+                    </div>
+                    <div class="float-card float-card-2">
+                        <div class="fc-icon">⚡</div>
+                        <div>
+                        <div class="fc-title">Live Alert</div>
+                        <div class="fc-text">Spike detected · 2s ago</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -131,6 +200,210 @@
                             <span>Twitter</span>
                         </div>                
                     </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════ DASHBOARD ══════════════════ -->
+        <section class="dashboard-section" id="dashboard">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Live Dashboard</div>
+                    <h2 class="section-title">See your data<br /><span class="gradient-text">come alive</span></h2>
+                    <p class="section-sub">A real-time command center for every metric that matters.</p>
+                </div>
+                <div class="full-dashboard">
+                    <!-- Sidebar -->
+                    <aside class="dash-sidebar">
+                        <div class="dash-logo">⬡ Nexora</div>
+                        <nav class="dash-nav">
+                        <a href="#" class="dash-nav-item active">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Overview
+                        </a>
+                        <a href="#" class="dash-nav-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            Analytics
+                        </a>
+                        <a href="#" class="dash-nav-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+                            Users
+                        </a>
+                        <a href="#" class="dash-nav-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+                            Integrations
+                        </a>
+                        <a href="#" class="dash-nav-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Security
+                        </a>
+                        </nav>
+                        <div class="dash-user">
+                        <div class="dash-avatar">AK</div>
+                        <div>
+                            <div class="dash-uname">Aisha Kim</div>
+                            <div class="dash-urole">Admin</div>
+                        </div>
+                        </div>
+                    </aside>
+
+                    <!-- Main content -->
+                    <main class="dash-main">
+                        <div class="dash-topbar">
+                        <div>
+                            <h2 class="dash-title">Good morning, Aisha 👋</h2>
+                            <p class="dash-subtitle">Here's what's happening today — May 24, 2026</p>
+                        </div>
+                        <div class="dash-topbar-actions">
+                            <button class="dash-btn-ghost">Export</button>
+                            <button class="dash-btn-primary">+ New Report</button>
+                        </div>
+                        </div>
+
+                        <!-- KPI Cards -->
+                        <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-top">
+                            <span class="kpi-label">Total Revenue</span>
+                            <span class="kpi-badge up">↑ 18.4%</span>
+                            </div>
+                            <div class="kpi-value">$284,921</div>
+                            <div class="kpi-bar"><div class="kpi-fill" style="width:72%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div></div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-top">
+                            <span class="kpi-label">Active Users</span>
+                            <span class="kpi-badge up">↑ 9.2%</span>
+                            </div>
+                            <div class="kpi-value">48,301</div>
+                            <div class="kpi-bar"><div class="kpi-fill" style="width:61%;background:linear-gradient(90deg,#0ea5e9,#06b6d4)"></div></div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-top">
+                            <span class="kpi-label">Conversion Rate</span>
+                            <span class="kpi-badge up">↑ 2.1%</span>
+                            </div>
+                            <div class="kpi-value">6.38%</div>
+                            <div class="kpi-bar"><div class="kpi-fill" style="width:44%;background:linear-gradient(90deg,#10b981,#059669)"></div></div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-top">
+                            <span class="kpi-label">Churn Rate</span>
+                            <span class="kpi-badge down">↓ 0.6%</span>
+                            </div>
+                            <div class="kpi-value">2.4%</div>
+                            <div class="kpi-bar"><div class="kpi-fill" style="width:24%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div>
+                        </div>
+                        </div>
+
+                        <!-- Chart + Donut Row -->
+                        <div class="dash-chart-row">
+                        <div class="dash-chart-card">
+                            <div class="chart-card-header">
+                            <span>Revenue — Last 12 months</span>
+                            <div class="chart-tabs">
+                                <button class="ct active">Monthly</button>
+                                <button class="ct">Weekly</button>
+                                <button class="ct">Daily</button>
+                            </div>
+                            </div>
+                            <div class="bar-chart">
+                            <div class="bar-wrap"><div class="bar" style="height:55%"><span>Jan</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:62%"><span>Feb</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:48%"><span>Mar</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:70%"><span>Apr</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:58%"><span>May</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:80%"><span>Jun</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:74%"><span>Jul</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:88%"><span>Aug</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:65%"><span>Sep</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:92%"><span>Oct</span></div></div>
+                            <div class="bar-wrap"><div class="bar" style="height:78%"><span>Nov</span></div></div>
+                            <div class="bar-wrap"><div class="bar bar-active" style="height:100%"><span>Dec</span></div></div>
+                            </div>
+                        </div>
+
+                        <div class="dash-chart-card dash-donut-card">
+                            <div class="chart-card-header"><span>Traffic Sources</span></div>
+                            <div class="donut-wrap">
+                            <svg viewBox="0 0 120 120" class="donut-svg">
+                                <circle cx="60" cy="60" r="48" fill="none" stroke="#1e1b4b" stroke-width="20"/>
+                                <circle cx="60" cy="60" r="48" fill="none" stroke="#6366f1" stroke-width="20" stroke-dasharray="180 122" stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
+                                <circle cx="60" cy="60" r="48" fill="none" stroke="#0ea5e9" stroke-width="20" stroke-dasharray="80 222" stroke-dashoffset="-180" transform="rotate(-90 60 60)"/>
+                                <circle cx="60" cy="60" r="48" fill="none" stroke="#10b981" stroke-width="20" stroke-dasharray="42 260" stroke-dashoffset="-260" transform="rotate(-90 60 60)"/>
+                            </svg>
+                            <div class="donut-legend">
+                                <div class="dl-item"><span style="background:#6366f1"></span>Organic 60%</div>
+                                <div class="dl-item"><span style="background:#0ea5e9"></span>Paid 27%</div>
+                                <div class="dl-item"><span style="background:#10b981"></span>Direct 13%</div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Activity Table -->
+                        <div class="activity-table-wrap">
+                        <div class="chart-card-header">
+                            <span>Recent Activity</span>
+                            <button class="dash-btn-ghost">View all</button>
+                        </div>
+                        <table class="activity-table">
+                            <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Event</th>
+                                <th>Source</th>
+                                <th>Value</th>
+                                <th>Status</th>
+                                <th>Time</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><div class="at-user"><div class="at-avatar" style="background:#6366f1">JD</div>James D.</div></td>
+                                <td>Upgraded plan</td>
+                                <td>Web App</td>
+                                <td class="at-green">+$299/mo</td>
+                                <td><span class="status-badge success">Success</span></td>
+                                <td class="at-time">2m ago</td>
+                            </tr>
+                            <tr>
+                                <td><div class="at-user"><div class="at-avatar" style="background:#0ea5e9">SR</div>Sara R.</div></td>
+                                <td>New signup</td>
+                                <td>Organic</td>
+                                <td>—</td>
+                                <td><span class="status-badge success">Success</span></td>
+                                <td class="at-time">8m ago</td>
+                            </tr>
+                            <tr>
+                                <td><div class="at-user"><div class="at-avatar" style="background:#10b981">MK</div>Max K.</div></td>
+                                <td>API request</td>
+                                <td>API</td>
+                                <td>$0.04</td>
+                                <td><span class="status-badge warning">Pending</span></td>
+                                <td class="at-time">14m ago</td>
+                            </tr>
+                            <tr>
+                                <td><div class="at-user"><div class="at-avatar" style="background:#a855f7">LC</div>Luna C.</div></td>
+                                <td>Export report</td>
+                                <td>Dashboard</td>
+                                <td>—</td>
+                                <td><span class="status-badge success">Success</span></td>
+                                <td class="at-time">31m ago</td>
+                            </tr>
+                            <tr>
+                                <td><div class="at-user"><div class="at-avatar" style="background:#ef4444">BT</div>Ben T.</div></td>
+                                <td>Payment failed</td>
+                                <td>Stripe</td>
+                                <td>-$99/mo</td>
+                                <td><span class="status-badge error">Failed</span></td>
+                                <td class="at-time">1h ago</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </main>
                 </div>
             </div>
         </section>
