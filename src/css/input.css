@@ -427,6 +427,131 @@ h1, h2, h3, h4 {
     color: var(--text-2);
   }
 
+  /* ═══════════════════════════════════════════════════════════
+   PRICING
+   ═══════════════════════════════════════════════════════════ */
+
+  .pricing {
+    @apply py-[120px];
+    background: var(--bg-0);
+  }
+
+  .billing-toggle {
+    @apply flex items-center gap-3 mt-2;
+  }
+
+  .bill-opt {
+    @apply flex items-center gap-1.5 text-[0.85rem] cursor-pointer transition-colors duration-200;
+    color: var(--text-3);
+  }
+
+  .bill-opt.active {
+    color: var(--text-1);
+  }
+
+  .toggle-switch {
+    @apply relative w-11 h-6 rounded-full cursor-pointer transition-all duration-300 border;
+    background: rgba(99,102,241,0.2);
+    border-color: var(--border-h);
+  }
+
+  .toggle-switch.on {
+    background: var(--indigo);
+  }
+
+  .toggle-knob {
+    @apply absolute w-[18px] h-[18px] rounded-full top-[2px] left-[2px] transition-transform duration-300;
+    background: var(--text-1);
+  }
+
+  .toggle-switch.on .toggle-knob {
+    @apply translate-x-5;
+  }
+
+  .save-badge {
+    @apply px-2 py-[2px] rounded-full text-[0.68rem] font-semibold;
+    background: rgba(16,185,129,0.1);
+    color: var(--emerald);
+  }
+
+  .pricing-grid {
+    @apply grid gap-4 items-stretch;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pricing-card {
+    @apply relative flex flex-col gap-5 rounded-[var(--radius-xl)] px-8 py-9 border transition-all duration-300 ease-in-out;
+    background: var(--bg-card);
+    border-color: var(--border);
+  }
+
+  .pricing-card:hover {
+    border-color: var(--border-h);
+    @apply -translate-y-[2px];
+  }
+
+  .pricing-popular {
+    border-color: var(--indigo) !important;
+    background: rgba(99,102,241,0.04);
+    box-shadow:
+      0 0 0 1px var(--indigo),
+      0 20px 60px rgba(99,102,241,0.15);
+  }
+
+  .popular-tag {
+    @apply absolute left-1/2 -translate-x-1/2 -top-[14px] whitespace-nowrap text-white text-[0.72rem] font-bold px-4 py-1 rounded-full;
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+  }
+
+  .plan-name {
+    @apply font-extrabold text-[1.2rem];
+    font-family: 'Syne', sans-serif;
+    color: var(--text-1);
+  }
+
+  .plan-desc {
+    @apply text-[0.85rem] leading-[1.5];
+    color: var(--text-3);
+  }
+
+  .plan-price {
+    @apply flex items-baseline gap-[2px];
+  }
+
+  .price-amount {
+    @apply text-[2.5rem] font-extrabold;
+    font-family: 'Syne', sans-serif;
+    color: var(--text-1);
+  }
+
+  .price-period {
+    @apply text-[0.85rem];
+    color: var(--text-3);
+  }
+
+  .plan-features {
+    @apply flex flex-col gap-2.5 flex-1;
+  }
+
+  .plan-features li {
+    @apply flex items-center gap-1.5 text-[0.88rem];
+    color: var(--text-2);
+  }
+
+  .plan-features li.dim {
+    color: var(--text-3);
+  }
+
+  .plan-btn {
+    @apply block text-center py-[13px] rounded-[10px] text-[0.88rem] font-semibold transition-all duration-200;
+  }
+
+  .pricing-popular .plan-btn.btn-primary {
+    @apply text-white;
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    box-shadow: 0 8px 24px rgba(99,102,241,0.3);
+  }
+
 
   /* ═══════════════════════════════════════════════════════════
    FEATURES

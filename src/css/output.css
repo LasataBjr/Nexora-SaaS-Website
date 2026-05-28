@@ -856,6 +856,195 @@ h1, h2, h3, h4 {
   line-height: var(--tw-leading, var(--text-base--line-height));
   color: var(--text-2);
 }
+.pricing {
+  padding-block: 120px;
+  background: var(--bg-0);
+}
+.billing-toggle {
+  margin-top: calc(var(--spacing) * 2);
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 3);
+}
+.bill-opt {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: calc(var(--spacing) * 1.5);
+  font-size: 0.85rem;
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  color: var(--text-3);
+}
+.bill-opt.active {
+  color: var(--text-1);
+}
+.toggle-switch {
+  position: relative;
+  height: calc(var(--spacing) * 6);
+  width: calc(var(--spacing) * 11);
+  cursor: pointer;
+  border-radius: calc(infinity * 1px);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  background: rgba(99,102,241,0.2);
+  border-color: var(--border-h);
+}
+.toggle-switch.on {
+  background: var(--indigo);
+}
+.toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  border-radius: calc(infinity * 1px);
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  background: var(--text-1);
+}
+.toggle-switch.on .toggle-knob {
+  --tw-translate-x: calc(var(--spacing) * 5);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+}
+.save-badge {
+  border-radius: calc(infinity * 1px);
+  padding-inline: calc(var(--spacing) * 2);
+  padding-block: 2px;
+  font-size: 0.68rem;
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  background: rgba(16,185,129,0.1);
+  color: var(--emerald);
+}
+.pricing-grid {
+  display: grid;
+  align-items: stretch;
+  gap: calc(var(--spacing) * 4);
+  grid-template-columns: repeat(3, 1fr);
+}
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 5);
+  border-radius: var(--radius-xl);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  padding-inline: calc(var(--spacing) * 8);
+  padding-block: calc(var(--spacing) * 9);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+.pricing-card:hover {
+  border-color: var(--border-h);
+  --tw-translate-y: calc(2px * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+}
+.pricing-popular {
+  border-color: var(--indigo) !important;
+  background: rgba(99,102,241,0.04);
+  box-shadow: 0 0 0 1px var(--indigo), 0 20px 60px rgba(99,102,241,0.15);
+}
+.popular-tag {
+  position: absolute;
+  top: calc(14px * -1);
+  left: calc(1 / 2 * 100%);
+  --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+  border-radius: calc(infinity * 1px);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 1);
+  font-size: 0.72rem;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--indigo), var(--violet));
+}
+.plan-name {
+  font-size: 1.2rem;
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+  font-family: 'Syne', sans-serif;
+  color: var(--text-1);
+}
+.plan-desc {
+  font-size: 0.85rem;
+  --tw-leading: 1.5;
+  line-height: 1.5;
+  color: var(--text-3);
+}
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.price-amount {
+  font-size: 2.5rem;
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+  font-family: 'Syne', sans-serif;
+  color: var(--text-1);
+}
+.price-period {
+  font-size: 0.85rem;
+  color: var(--text-3);
+}
+.plan-features {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2.5);
+}
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 1.5);
+  font-size: 0.88rem;
+  color: var(--text-2);
+}
+.plan-features li.dim {
+  color: var(--text-3);
+}
+.plan-btn {
+  display: block;
+  border-radius: 10px;
+  padding-block: 13px;
+  text-align: center;
+  font-size: 0.88rem;
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+}
+.pricing-popular .plan-btn.btn-primary {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--indigo), var(--violet));
+  box-shadow: 0 8px 24px rgba(99,102,241,0.3);
+}
 .features {
   padding-block: 120px;
   background: var(--bg-0);
