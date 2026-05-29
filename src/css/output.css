@@ -1671,7 +1671,7 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-xl);
   border-style: var(--tw-border-style);
   border-width: 1px;
-  grid-template-columns: 1fr;
+  grid-template-columns: 200px 1fr;
   background: var(--bg-2);
   border-color: var(--border-h);
   box-shadow: 0 40px 80px rgba(0,0,0,0.5);
@@ -2673,13 +2673,30 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 1024px) {
   .full-dashboard {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
   .dash-sidebar {
-    display: none;
+    display: flex;
+    width: 100%;
+    border-right-style: var(--tw-border-style);
+    border-right-width: 0px;
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    border-color: var(--border);
+  }
+  .dash-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .dash-nav-item {
+    flex: 1;
+    justify-content: center;
+    flex: 1 1 calc(50% - 10px);
   }
   .kpi-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
   }
   .dash-chart-row {
     grid-template-columns: 1fr;
@@ -2714,9 +2731,6 @@ h1, h2, h3, h4 {
   }
   .full-dashboard {
     grid-template-columns: 1fr;
-  }
-  .dash-sidebar {
-    display: none;
   }
   .dash-main {
     padding: 20px;

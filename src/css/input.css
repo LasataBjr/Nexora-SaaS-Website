@@ -622,7 +622,7 @@ h1, h2, h3, h4 {
 
   .full-dashboard {
     @apply grid overflow-hidden min-h-[640px] rounded-[var(--radius-xl)] border;
-    grid-template-columns: 1fr;
+    grid-template-columns: 200px 1fr;
     background: var(--bg-2);
     border-color: var(--border-h);
     box-shadow: 0 40px 80px rgba(0,0,0,0.5);
@@ -1383,19 +1383,29 @@ h1, h2, h3, h4 {
    RESPONSIVE
    ═══════════════════════════════════════════════════════════ */
   @media (max-width: 1024px) {
-    .full-dashboard { 
-      grid-template-columns: 1fr;
+    .full-dashboard{
+      @apply flex flex-col;
     }
 
-    .dash-sidebar {
-      display: none;
+    .dash-sidebar{
+      @apply flex w-full border-r-0 border-b;
+      border-color: var(--border);
     }
 
-    .kpi-grid { 
-      grid-template-columns: repeat(2, 1fr);
+    .dash-nav{
+      @apply flex-row flex-wrap gap-[10px];
     }
 
-    .dash-chart-row { 
+    .dash-nav-item{
+      @apply flex-1 justify-center;
+      flex: 1 1 calc(50% - 10px);
+    }
+
+    .kpi-grid{
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .dash-chart-row{
       grid-template-columns: 1fr;
     }
 
@@ -1442,9 +1452,7 @@ h1, h2, h3, h4 {
       grid-template-columns: 1fr;
     }
 
-    .dash-sidebar {
-      display: none;
-    }
+   
 
     .dash-main {
       padding: 20px;
